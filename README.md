@@ -15,6 +15,9 @@ use python source python3 main.py or if you are using windows, simply open the m
 hope you enjoy
 here are some screenshots
 ![image](https://user-images.githubusercontent.com/97672521/182281471-9eea1ab5-aa90-4ba4-9bf0-58271c128251.png)
+or the chinease version
+![image](https://user-images.githubusercontent.com/97672521/182290982-ebf63513-6d1b-4617-884b-5b5f90fab092.png)
+
 
 THE AUTHOR DOES NOT TAKE ANY RESPONSIBILITY OF ANY DAMAGE
 
