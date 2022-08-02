@@ -17,4 +17,5 @@ here are some screenshots
 ![image](https://user-images.githubusercontent.com/97672521/182281471-9eea1ab5-aa90-4ba4-9bf0-58271c128251.png)
 
 THE AUTHOR DOES NOT TAKE ANY RESPONSIBILITY OF ANY DAMAGE
+
 All rights reserved
