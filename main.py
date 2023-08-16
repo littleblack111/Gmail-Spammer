@@ -64,28 +64,28 @@ cmd = threading.Thread(target=command)
         
 me = sys.argv
 
-fromaddrs = input(str('[*] Enter you gmail address : '))
+fromaddrs = input(str('[*] Enter you gmail address: '))
 while len(fromaddrs) == 0:
-    fromaddrs = input(str('[*] Enter you gmail address : '))
+    fromaddrs = input(str('[*] Enter you gmail address: '))
 
     
-toaddrs = input(str('[*] Enter the gmail address that you want to spam : '))
+toaddrs = input(str('[*] Enter the gmail address that you want to spam: '))
 while len(toaddrs) == 0:
-    toaddrs = input(str('[*] Enter the gmail address that you want to spam : '))
+    toaddrs = input(str('[*] Enter the gmail address that you want to spam: '))
 
     
-message = input(str('[*] Enter the message that you are going to spam : '))
+message = input(str('[*] Enter the message that you are going to spam: '))
 while len(message) == 0:
-    message = input(str('[*] Enter the message that you are going to spam : '))
+    message = input(str('[*] Enter the message that you are going to spam: '))
 
-apppass = input(str('[*] Enter your application password(https://support.google.com/accounts/answer/185833?hl=en) : '))
+apppass = input(str('[*] Enter your application password(https://support.google.com/accounts/answer/185833?hl=en): '))
 while len(apppass) == 0:
-    apppass = input(str('[*] Enter your application password(https://support.google.com/accounts/answer/185833?hl=en) : '))
+    apppass = input(str('[*] Enter your application password(https://support.google.com/accounts/answer/185833?hl=en): '))
 
 
-times = input('[*] How many time you want to spam(-1 = forever) : ')
+times = input('[*] How many time you want to spam(-1 = forever): ')
 while len(times) == 0:
-    times = input('[*] How many time you want to spam(-1 = forever) : ') 
+    times = input('[*] How many time you want to spam(-1 = forever): ') 
 times = int(times)
 loop = 0
 cmd.start()
@@ -104,7 +104,7 @@ while loop == 0:
                     th = threading.Thread(target=animate)
                     th.start()
                     smtpserver.sendmail(fromaddrs, toaddrs, message)
-                    print('\r[*] Spamed' + i)
+                    print(f'\r[*] Spamed {i} times')
 
 
             elif times == -1:
@@ -114,7 +114,7 @@ while loop == 0:
                     th = threading.Thread(target=animate)
                     th.start()
                     smtpserver.sendmail(fromaddrs, toaddrs, message)
-                    print('\r[*] Spamed', i)
+                    print(f'\r[*] Spamed {i}')
 
 
     except smtplib.SMTPSenderRefused:
@@ -154,7 +154,8 @@ while loop == 0:
                             th = threading.Thread(target=animate)
                             th.start()
                             smtpserver.sendmail(fromaddrs, toaddrs, message)
-                            print('\r[*] Spamed' + i)
+                            print(f'\r[*] Spamed {i}')
+                        break
 
 
                     elif times == -1:
@@ -205,4 +206,5 @@ while loop == 0:
 done = True
 sys.exit()
 exit()
+
 # Gmail Spammer script ends

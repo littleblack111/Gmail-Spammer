@@ -60,28 +60,28 @@ cmd = threading.Thread(target=command)
         
 me = sys.argv
 
-fromaddrs = input(str('[*] 请输入自己的邮箱 : '))
+fromaddrs = input(str('[*] 请输入自己的邮箱: '))
 while len(fromaddrs) == 0:
-    fromaddrs = input(str('[*] 请输入自己的邮箱 : '))
+    fromaddrs = input(str('[*] 请输入自己的邮箱: '))
 
     
-toaddrs = input(str('[*] 请输入要"发给"的人 : '))
+toaddrs = input(str('[*] 请输入要"发给"的人: '))
 while len(toaddrs) == 0:
-    toaddrs = input(str('[*] 请输入要"发给"的人 : '))
+    toaddrs = input(str('[*] 请输入要"发给"的人: '))
 
     
-message = input(str('[*] 请输入信息 : '))
+message = input(str('[*] 请输入信息: '))
 while len(message) == 0:
-    message = input(str('[*] 请输入信息 : '))
+    message = input(str('[*] 请输入信息: '))
 
-apppass = input(str('[*] 请输入应用专用密码 : '))
+apppass = input(str('[*] 请输入应用专用密码: '))
 while len(apppass) == 0:
-    apppass = input(str('[*] 请输入应用专用密码 : '))
+    apppass = input(str('[*] 请输入应用专用密码: '))
 
 
-times = input('[*] 发送多少次(-1 = 永久) : ')
+times = input('[*] 发送多少次(-1 = 永久): ')
 while len(times) == 0:
-    times = input('[*] 发送多少次(-1 = 永久) : ') 
+    times = input('[*] 发送多少次(-1 = 永久): ') 
 times = int(times)
 loop = 0
 cmd.start()
@@ -100,7 +100,7 @@ while loop == 0:
                     th = threading.Thread(target=animate)
                     th.start()
                     smtpserver.sendmail(fromaddrs, toaddrs, message)
-                    print('\r[*] 发送了' + i)
+                    print(f'\r[*] 发送了 {i}')
 
 
             elif times == -1:
@@ -150,7 +150,7 @@ while loop == 0:
                             th = threading.Thread(target=animate)
                             th.start()
                             smtpserver.sendmail(fromaddrs, toaddrs, message)
-                            print('\r[*] 发送了' + i)
+                            print(f'\r[*] 发送了 {i}')
 
 
                     elif times == -1:
@@ -160,7 +160,7 @@ while loop == 0:
                             th = threading.Thread(target=animate)
                             th.start()
                             smtpserver.sendmail(fromaddrs, toaddrs, message)
-                            print('\r[*] 发送了', i)
+                            print(f'\r[*] 发送了 {i}')
                     if might_limit >= 150:
                         print('[警告] 你可能已经到达每天发送限制的极限了')
                         print('[警告] 你可能已经到达每天发送限制的极限了')
@@ -196,8 +196,8 @@ while loop == 0:
                 done = False
                 loop = 1
 
-                
-                    
+ 
+ 
 done = True
 sys.exit()
 exit()
